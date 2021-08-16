@@ -19,4 +19,10 @@ describe('AppController', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
   });
+
+  describe('wildcard', () => {
+    it('should return "Hello <name>!"', () => {
+      expect(appController.getHelloName('Max')).toBe('Hello Max!');
+    });
+  });
 });
